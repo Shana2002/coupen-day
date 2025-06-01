@@ -1,6 +1,7 @@
 "use client"
 
 import CourseCard from '@/components/CourseCard'
+import { PaginationNext, PaginationPervious } from '@/components/Pagination'
 import React from 'react'
 
 const page = () => {
@@ -13,10 +14,10 @@ const page = () => {
                 <CourseCard key={index} />
             ))}
         </div>
-        <div className='w-full bg-amber-300 h-6 flex items-center justify-center gap-10'>
-            <div>Page Back</div>
-            <div>Page 0</div>
-            <div>Page Forward</div>
+        <div className='w-full h-6 flex items-center justify-center gap-10'>
+            <PaginationPervious isDisable={true} />
+            <div>Page 1</div>
+            <PaginationNext />
         </div>
     </div>
   )
