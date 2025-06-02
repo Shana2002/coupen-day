@@ -1,6 +1,6 @@
 import React from "react";
 
-const CourseCard = () => {
+const CourseCard = ({data}) => {
   return (
     <div className="flex items-center justify-center flex-col w-[20vw] p-3 shadow rounded-2xl">
       <img
@@ -8,8 +8,7 @@ const CourseCard = () => {
         alt=""
       />
       <h1 className="line-clamp-3 my-2">
-        Enroll in a Free Online Course with Certificate – C++ Programming
-        Masterclass with MySQL & PostgreSQL Database & More!
+        {data.title}
       </h1>
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center justify-center gap-3">
