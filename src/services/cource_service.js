@@ -42,7 +42,7 @@ export const getCouponsPage = async (pageSize = 5, lastDoc = null) => {
 
 let lastVisibleDocs = {}; // keep track per page
 
-export const fetchCourses = async (page = 1, pageSize = 6) => {
+const fetchCourses = async (page = 1, pageSize = 6) => {
   const courseRef = collection(db, "coupones");
 
   const baseQuery = query(courseRef, orderBy("createdAt", "desc"), limit(pageSize));
