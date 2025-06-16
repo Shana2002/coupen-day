@@ -15,7 +15,7 @@ const getTotalCoupons = async () => {
   return snapshot.data().count; // total documents
 };
 
-export const getCouponsPage = async (pageSize = 5, lastDoc = null) => {
+const getCouponsPage = async (pageSize = 5, lastDoc = null) => {
   const baseQuery = query(
     collection(db, "coupones"),
     orderBy("createdAt", "desc"),
