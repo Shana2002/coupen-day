@@ -9,19 +9,6 @@ import {
 } from "firebase/firestore";
 import { db } from "@/firebase/config";
 
-// const fetchCourses = async () => {
-//   try {
-//     const querySnapshot = await getDocs(collection(db, "coupones"));
-//     const courses = querySnapshot.docs.map((doc) => ({
-//       id: doc.id,
-//       ...doc.data(),
-//     }));
-//     return courses;
-//   } catch (error) {
-//     console.error("Firestore fetch error:", error);
-//     return [];
-//   }
-// };
 
 const getTotalCoupons = async () => {
   const snapshot = await getCountFromServer(collection(db, "coupones"));
